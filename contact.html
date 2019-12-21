@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>İletişim | Talha AYDIN</title>
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style/custom.css">
+</head>
+<body>
+
+    <header>        
+        <div class="navbar" id="navigation-bar">
+            <div class="container navbar-flex">
+                <a href="index.html">
+                   <img src="img/logo.png" alt=""> 
+                </a>
+                <div class="navbar-menu">
+                    <a href="index.html">Anasayfa</a>
+                    <a href="about.html">Hakkımda</a>
+                    <div class="navbar-dropdown">
+                        <button class="dropdown-button">Video
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="video.html">Video 1</a>
+                            <a href="#">Video 2</a>
+                            <a href="#">Video 3</a>
+                        </div>
+                    </div>
+                    <a href="contact.html">İletişim</a>
+                </div>
+                <a href="javascript:void(0);" class="collapse-button" onclick="collapseNavbar()">&#9776;</a>
+            </div>    
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="contact">
+            <div class="box">
+                <h1>İletişim</h1>
+
+                <form action="https://formspree.io/mbjlaewj" method="POST" autocomplete="off">
+                    <input type="text" name="name" class="form-input" placeholder="Ad">
+                    <input type="text" name="surname" class="form-input" placeholder="Soyad">
+                    <input type="text" onfocus="(this.type='date')" name="birth_date" class="form-input" placeholder="Doğum Tarihi">
+                    <input type="tel" name="phone" class="form-input" placeholder="Telefon Numarası">
+                    <input type="email" name="email" class="form-input" placeholder="E-Posta Adresi">
+                    <textarea name="message" class="form-input" placeholder="Mesaj" id="" cols="20" rows="5"></textarea>
+                    <button type="submit" class="button send-contact">Gönder</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <div class="owner-info">
+                    <ul>
+                        <li>Talha AYDIN</li>
+                        <li>talhaydn58@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <a href="https://github.com/talhaaydn" target="_blank" class="social-button github-button">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/talha-aydin/" target="_blank" class="social-button likedin-button">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="copyright">© 2019 All rights reserved. Designed by Talha AYDIN</div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="goToTop()" id="goToTopButton">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script/custom.js"></script>
+</body>
+</html>
