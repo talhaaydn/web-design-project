@@ -1,0 +1,1005 @@
+Ad-Soyad: Talha AYDIN
+Numara: 171307054
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #15151B;    
+}
+a{
+    text-decoration: none;
+}
+p {
+    font-weight: 300;
+}
+button, input, textarea, a {
+    outline: none;
+}
+h1,h2 {
+    margin: 10px 0;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #425cbb;
+    outline: 1px solid #425cbb;
+    border-radius: 10px;
+}
+/* Başladı - Bootstrap'tan alındı. */
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+@media (min-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }
+}
+/* Bitti - Bootstrap'tan alındı. */
+
+.button {
+    font-weight: 400;
+    margin: 5px 1px;
+    border: none;
+    border-radius: .2rem;
+    padding: 13px 25px;
+    cursor: pointer;
+    background-color: #888;
+    font-family: 'Tomorrow', sans-serif;
+    color: #FFFFFF;
+}
+.button:active{
+    outline: 0 !important;
+}
+
+/* Navbar CSS */
+/* Başladı - W3Schools'tan alındı. */
+/* https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp */
+.navbar {
+  background-color: #15151B;
+  overflow: hidden;
+}
+.navbar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-menu {
+    float: right;
+}
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.active {
+  background-color: #425cbb;
+  color: #FFFFFF;
+}
+.navbar .collapse-button {
+  display: none;
+}
+.navbar-dropdown {
+  float: left;
+  overflow: hidden;
+}
+.navbar-dropdown .dropdown-button {
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.navbar a:hover, .navbar-dropdown:hover .dropdown-button {
+  background-color: #15151B;
+}
+.navbar a.collapse-button:hover {
+    background-color: unset;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.navbar-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-dropdown .dropdown-button {
+        display: none;
+    }
+    .navbar .collapse-button {
+        float: right;
+        display: block !important;
+    }
+    .navbar-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .navbar-flex {
+        display: unset !important;
+    }
+    .navbar.responsive .navbar-menu {
+        float: unset !important;
+        display: block;
+    }
+    .navbar.responsive .collapse-button{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .navbar.responsive .navbar-dropdown {float: none;}
+    .navbar.responsive .dropdown-content {position: relative;}
+    .navbar.responsive .navbar-dropdown .dropdown-button {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .navbar .container {
+        max-width: unset;
+    }
+}
+/* Bitti - W3Schools'tan alındı. */
+
+/* Header Background CSS */
+.greeting {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 81px);
+    background-color: #15151B;
+}
+.greeting .greeting-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 880px;
+}
+.greeting-content .profile-image img{
+    position: relative;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    padding: 0;
+    margin: 0;
+    border: 15px solid transparent;
+    z-index: 9999;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.greeting-content h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.greeting-content p {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.greeting-content .download-cv {
+    background-color: #425cbb;
+    padding: 18px 35px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 3px rgba(66,92,187, 0.35);
+    font-weight: 500;
+}
+.social-media {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.social-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50%;    
+    margin-left: 10px;
+    color: #FFFFFF !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.social-button:first-child { margin-left: 0; }
+.github-button {
+    background-color: #24292E;
+}
+.github-button:hover {
+    background-color: #24292E !important;
+    box-shadow: 0 0 5px 5px rgba(36, 41, 46, .4);
+}
+.likedin-button {
+    background-color: #0077B5;
+}
+.likedin-button:hover {
+    background-color: #0077B5 !important;
+    box-shadow: 0 0 5px 5px rgba(0, 119, 181, .2);
+}
+
+/* Slideshow CSS */
+/* Başladı - W3School'tan alındı. */
+/* https://www.w3schools.com/howto/howto_js_slideshow.asp */
+.carousel {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 15px;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgb(31, 32, 41);
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+/* Bitti - W3School'tan alındı. */
+
+/* Announcement CSS */
+section.announcement {
+    box-shadow: 0px 5px 25px 0px rgba(31, 32, 41, .8);
+    background-color: #1F2029;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section.announcement .box {
+    width: 100%;
+    padding: 20px 30px;
+}
+section.announcement .box h1 {
+    position: relative;
+    padding-bottom: 5px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+section.announcement .box h1:before {
+    position: absolute;
+    content: '';
+    background-color: #425cbb;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    box-shadow: 0 0 3px 1px rgba(66,92,187, 0.35);
+}
+.box-inner h2 {
+    font-size: 20px;
+}
+.box-inner p {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+.box-inner:last-child p {
+    border: none;
+    padding-bottom: 0px;
+}
+
+/* About CSS */
+section.about {
+    box-shadow: 0px 5px 25px 0px rgba(31, 32, 41, .8);
+    background-color: #1F2029;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section.about .box {
+    width: 47%;
+    padding: 10px 20px;
+}
+section.about .box h1 {
+    position: relative;
+    padding-bottom: 5px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+section.about .box h1:before {
+    position: absolute;
+    content: '';
+    background-color: #425cbb;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    box-shadow: 0 0 3px 1px rgba(66,92,187, 0.35);
+}
+.about table {
+    width: 100%;
+}
+.about table tr td {
+    padding: 5px 0px;
+}
+
+@media screen and (max-width: 600px) {
+    section.about {
+        flex-direction: column;
+    }
+    section.about .box {
+        width: 100%;
+    }
+}
+
+/* Timeline CSS */
+.timeline {
+    padding-left: 23px;
+}
+.timeline li:first-child {
+    padding: 0 0 60px 18px;
+}
+.timeline li {
+    border-left: solid 2px rgba(255, 255, 255, 0.7);
+    list-style: none;
+    padding: 0 0 40px 30px;
+}
+.timeline li:before {
+    content: "";
+    border: solid 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    font-size: 8px;
+    margin-left: -37px;
+    font-weight: 400;
+    background: #fff;
+    display: block;
+    position: absolute;
+    margin-top: 0px;
+}
+.timeline li:before {
+    border-color: #425cbb !important;
+}
+.timeline li:first-child:before {
+    border: 0;
+    background: none;
+    position: relative;
+}
+.timeline li:first-child i {
+    float: left;
+    margin-left: -30px;
+    padding: 18px 16px;
+    border-radius: 30px;
+    margin: -13px -45px;
+    color: #fff;
+    width: 53px;
+    text-align: center;
+    background: #425cbb !important;
+    box-shadow: 0 0 10px 3px rgba(66,92,187, 0.35);
+}
+.timeline-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-left: 25px;
+    line-height: 0px;
+    color: #FFFFFF;
+}
+.timeline li {
+    border-left: solid 2px rgba(255, 255, 255, 0.7);
+    list-style: none;
+    padding: 0 0 40px 30px;
+    margin: 0;
+}
+.timeline li .line-title {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    margin-top: -3px;
+}
+.timeline li span {
+    font-size: 12px;
+    padding: 5px 0;
+    display: block;
+}
+.timeline li:last-child {
+    border: 0;
+    margin-left: 2px;
+    padding-bottom: 0;
+}
+
+/* Skill List CSS */
+.skill-list {
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+.skill-list li {
+    list-style: none;
+}
+.skill-list h3 {
+    font-size: 13px;
+    font-weight: 400;
+}
+.skill-list .progress {
+    margin: 10px 0 20px;
+    display: block;
+    height: 5px;
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    background: #dfdfdf;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.skill-list .progress .percentage {
+    border-radius: 50px 0 0 50px;
+    -moz-border-radius: 50px 0 0 50px;
+    -webkit-border-radius: 50px 0 0 50px;
+    -ms-border-radius: 50px 0 0 50px;
+    -o-border-radius: 50px 0 0 50px;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+}
+.skill-list .progress .percentage {
+    background: #425cbb !important;
+}
+
+/* Contact CSS */
+section.contact {
+    box-shadow: 0px 5px 25px 0px rgba(31, 32, 41, .8);
+    background-color: #1F2029;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section.contact .box {
+    width: 100%;
+    padding: 20px 30px;
+}
+section.contact .box h1 {
+    position: relative;
+    padding-bottom: 5px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+section.contact .box h1:before {
+    position: absolute;
+    content: '';
+    background-color: #425cbb;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    box-shadow: 0 0 3px 1px rgba(66,92,187, 0.35);
+}
+.contact form {
+    margin-top: 30px;
+}
+input, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+/* Başladı - Bootstrap üzerinden alındı. */
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+    background: #15151b;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-color: transparent;
+    border-radius: 0px;
+    margin-bottom: 15px;
+}
+/* Bitti - Bootstrap üzerinden alındı. */
+.contact .send-contact {
+    background-color: #425cbb;
+    padding: 18px 35px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 3px rgba(66,92,187, 0.35);
+    font-weight: 500;
+    float: right;
+    width: 100%;
+}
+@media screen and (max-width: 600px) {
+    .contact .send-contact {
+        float: inherit;
+        width: 100%;
+    }
+}
+
+/* Video CSS */
+section.video {
+    box-shadow: 0px 5px 25px 0px rgba(31, 32, 41, .8);
+    background-color: #1F2029;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section.video .box {
+    width: 100%;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+section.video .box video {
+    height: 300px;
+    width: auto;
+}
+.video .video-btn {
+    background-color: #425cbb;
+    border-radius: 50%;
+    font-weight: 500;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+}
+.video .video-btn:hover {
+    box-shadow: 0 0 10px 3px rgba(66,92,187, 0.35);
+}
+@media screen and (max-width: 768px) {
+    section.video .box video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Footer CSS */
+footer {
+    padding: 30px 0;
+    background-color: #1F2029;
+    margin-top: 60px;
+}
+footer .container {
+    padding: 0;
+}
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+.footer-box .owner-info ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-box .social-media {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+    .footer-box {
+        flex-direction: column;
+    }
+    .footer-box div:first-child {
+        margin-bottom: 20px;
+    }
+}
+
+#goToTopButton {
+    height: 50px;
+    width: 50px;
+    display: none;
+    position: fixed;
+    bottom: 66px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #425cbb;
+    box-shadow: 0 0 10px 3px rgba(66,92,187, 0.35);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anasayfa | Talha AYDIN</title>
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style/custom.css">
+</head>
+<body>
+
+    <header>        
+        <div class="navbar" id="navigation-bar">
+            <div class="container navbar-flex">
+                <a href="index.html">
+                   <img src="img/logo.png" alt=""> 
+                </a>
+                <div class="navbar-menu">
+                    <a href="index.html">Anasayfa</a>
+                    <a href="about.html">Hakkımda</a>
+                    <div class="navbar-dropdown">
+                        <button class="dropdown-button">Video
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="video.html">Video 1</a>
+                            <a href="#">Video 2</a>
+                            <a href="#">Video 3</a>
+                        </div>
+                    </div>
+                    <a href="contact.html">İletişim</a>
+                </div>
+                <a href="javascript:void(0);" class="collapse-button" onclick="collapseNavbar()">&#9776;</a>
+            </div>    
+        </div>
+    </header>
+
+    <!-- Slideshow container -->
+    <div class="container" style="position: relative; margin-top: 40px">
+        <!-- Full-width images with number and caption text -->
+        <div class="carousel fade">
+            <img src="img/photo-1.jpg" style="width:100%">
+        </div>
+
+        <div class="carousel fade">
+            <img src="img/photo-2.jpg" style="width:100%">
+        </div>
+
+        <div class="carousel fade">
+            <img src="img/photo-3.jpg" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    
+
+    <div class="container">
+        <section class="announcement">
+            <div class="box">
+                <h1>Duyurular</h1>
+                <div class="box-inner" style="margin-top: 30px">
+                    <h2>Duyuru 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet venenatis urna cursus eget nunc scelerisque viverra. In hac habitasse platea dictumst quisque sagittis purus sit amet. Id aliquet risus feugiat in ante metus dictum.</p>
+                </div>
+                
+                <div class="box-inner">
+                    <h2>Duyuru 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet.</p>
+                </div>
+
+                <div class="box-inner">
+                    <h2>Duyuru 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis ut diam quam nulla porttitor massa id neque aliquam.</p>
+                </div>
+
+                <div class="box-inner">
+                    <h2>Duyuru 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="announcement">
+            <div class="box">
+                <h1>Haberler</h1>
+                <div class="box-inner" style="margin-top: 30px">
+                    <h2>Haber 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue neque gravida in.</p>
+                </div>
+                
+                <div class="box-inner">
+                    <h2>Haber 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat. Id leo in vitae turpis massa sed elementum tempus. Donec pretium vulputate sapien nec sagittis aliquam malesuada. Urna cursus eget nunc scelerisque viverra mauris in aliquam sem.</p>
+                </div>
+
+                <div class="box-inner">
+                    <h2>Haber 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ut tellus elementum sagittis vitae et. Consequat id porta nibh venenatis cras sed felis eget velit. Sed adipiscing diam donec adipiscing. Ac ut consequat semper viverra. Viverra justo nec ultrices dui sapien eget mi.</p>
+                </div>
+
+                <div class="box-inner">
+                    <h2>Haber 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem nulla pharetra diam sit amet nisl. Dictumst vestibulum rhoncus est pellentesque. Enim lobortis scelerisque fermentum dui faucibus. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <div class="owner-info">
+                    <ul>
+                        <li>Talha AYDIN</li>
+                        <li>talhaydn58@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <a href="https://github.com/talhaaydn" target="_blank" class="social-button github-button">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/talha-aydin/" target="_blank" class="social-button likedin-button">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="copyright">© 2019 All rights reserved. Designed by Talha AYDIN</div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="goToTop()" id="goToTopButton" title="">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script/custom.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hakkımda | Talha AYDIN</title>
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style/custom.css">
+</head>
+<body>
+
+    <header>        
+        <div class="navbar" id="navigation-bar">
+            <div class="container navbar-flex">
+                <a href="index.html">
+                   <img src="img/logo.png" alt=""> 
+                </a>
+                <div class="navbar-menu">
+                    <a href="index.html">Anasayfa</a>
+                    <a href="about.html">Hakkımda</a>
+                    <div class="navbar-dropdown">
+                        <button class="dropdown-button">Video
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="video.html">Video 1</a>
+                            <a href="#">Video 2</a>
+                            <a href="#">Video 3</a>
+                        </div>
+                    </div>
+                    <a href="contact.html">İletişim</a>
+                </div>
+                <a href="javascript:void(0);" class="collapse-button" onclick="collapseNavbar()">&#9776;</a>
+            </div>    
+        </div>
+    </header>
+
+    <div class="greeting">
+        <div class="container">
+            <div class="greeting-content">
+                <h1>Talha AYDIN</h1>
+                <p>Frontend Developer and Backend Developer</p>
+                <button class="button download-cv" onclick="editableToActive()">CV Düzenle</button>
+                <a href="cv.pdf" class="button download-cv" id="cmd" download="">CV İndir</a>
+                <div class="social-media">
+                    <a href="https://github.com/talhaaydn" target="_blank" class="social-button github-button">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/talha-aydin/" target="_blank" class="social-button likedin-button">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>                    
+        </div>
+    </div>
+
+    <!-- <div id="content"> -->
+        <div class="container">            
+            <section class="about">
+                <div class="box">
+                    <h1>Hakkımda</h1>
+                    <p id="about"></p>
+                </div>
+                <div class="box">
+                    <h1>Daha Fazla Bilgi</h1>
+                    <table id="more-about">
+                        <tr>
+                            <td>Yaş:</td>
+                            <td id="age"></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td id="email"></td>
+                        </tr>
+                        <tr>
+                            <td>Adres:</td>
+                            <td id="address"></td>
+                        </tr>
+                        <tr>
+                            <td>Bildiğim Diller:</td>
+                            <td id="language"></td>
+                        </tr>
+                    </table>    
+                </div>
+            </section>            
+        </div>
+
+        <div class="container">
+            <section class="about">
+                <div class="box">
+                    <ul class="timeline" id="work-experience">
+                        <li>
+                            <i class="fa fa-suitcase" aria-hidden="true"></i>
+                            <h2 class="timeline-title">İş Deneyimlerim</h2>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="box">
+                    <ul class="timeline" id="education-information">
+                        <li>
+                            <i class="fa fa-user-graduate" aria-hidden="true"></i>
+                            <h2 class="timeline-title">Eğitim Bilgilerim</h2>
+                        </li>
+                    </ul> 
+                </div>
+            </section>
+        </div>
+        
+        <div class="container">            
+            <section class="about">
+                <div class="box">
+                    <h1>Diller</h1>
+                    <ul class="skill-list" id="software-language"></ul>
+                </div>
+                <div class="box">
+                    <h1>Kütüphane ve Frameworkler</h1>
+                    <ul class="skill-list" id="library-framework"></ul>
+                </div>
+            </section>      
+        </div>
+    <!-- </div> -->
+    
+
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <div class="owner-info">
+                    <ul>
+                        <li>Talha AYDIN</li>
+                        <li>talhaydn58@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <a href="https://github.com/talhaaydn" target="_blank" class="social-button github-button">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/talha-aydin/" target="_blank" class="social-button likedin-button">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="copyright">© 2019 All rights reserved. Designed by Talha AYDIN</div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="goToTop()" id="goToTopButton" title="">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="script/custom.js"></script>
+    <script src="script/about.js"></script>
+</body>
+</html>
